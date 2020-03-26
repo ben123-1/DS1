@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<meta name="author" content=" Борис Иванов">                  <! Имя автора сайта для поисковых систем>
+	<meta name="discription" content="Этот сайт посвящен расчету количества груза на теплоходах,
+	 кораблях, баржах с помощью draft survey">         <! Краткое описание смысла сайта для поисковых сиситем>
+
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	  <!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	
+	<link rel="stylesheet" href="style/style.css">
+	<title>Draft Survey Version 1.0</title>                                 <!Имя на ярлыке страницы>
+	<link rel="shortcut icon" href="ico/load mark.ico" type="image/x-icon"> <!Иконка на ярлыке страницы>
+</head>
+<body>
+<!-- --------------------Меню сайта----------------------- -->
+	<header class="mainmenu" id="mainmeny">
+		<div class="header-bg header-bg img">
+			<div class="title"> 
+			 <p><h1><img src="images/load mark.jpg" width="30pxl" height="30pxl"
+				alt="Картинка-символ сайта">Draft survey</h1>  </p>        <! Логотип и название сайта>
+			</div>
+			<p> <a href="#top"> Главная </a>                                  <!Для меню>
+				<a href="html/page-1.html"> Новости </a>
+				<a href="html/page-5.html"> Форум </a>
+				<a href="html/page-6.html"> О проекте </a>
+			</p>
+		
+		</div>
+	</header>
+<!-- --------------------------Меню-1------------------ -->
+	<div class="menu1" id="meny1">
+		
+	</div>
+
+	<!-- Меню 2 -->
+	<div class="menu2" id="meny2">
+		
+		<!-- ------------------------------------------ -->
+		
+		<span><input class="hend" type="radio" name="load/Discharge" value="load">Погрузка</span>
+		<span><input class="hend" type="radio" name="load/Discharge" value="Discharge">Выгрузка</span>
+	</div>
+
+	<!-- Меню 3 или табы -->
+	<div class="tab sticky">
+		<button class="tablinks" onclick="OpenTab(event, 'tab1')" id="defaultOpen">Основные</button>
+		<button class="tablinks" onclick="OpenTab(event, 'tab2')">Осадки & Расчет MMC</button>
+		<button class="tablinks" onclick="OpenTab(event, 'tab3')">Гидростатика & Вес груза</button>
+		<button class="tablinks" onclick="OpenTab(event, 'tab4')">Балласт & Пресная вода</button>
+		<button class="tablinks" onclick="OpenTab(event, 'tab5')">Замечания / Примечания</button>
+		<button class="tablinks" onclick="OpenTab(event, 'tab6')">Вложенные документы</button>
+		<button class="tablinks" onclick="OpenTab(event, 'tab7')">Крен & Наклон</button>
+	</div>
+
+	<!-- --------------Основные----------   -->		
+	<div id="tab1" class="tabcontent">
+
+		<!-- ---------------0----Для свертывания / развертывания всех элементов-------------- -->
+	
+		<div class="section">
+			<p class="subsection accord openHide" id="openHideAll">Развернуть / Свернуть</p> 
+			<div class="hide"></div>
+
+		</div>
+		<!-- ---------------1------------------ -->
+
+		<div class="section">
+			<p class="subsection accord" id="openMain">Главная </p> 
+			<!-- <button class="button button1">Главная</button> -->
+			<!-- <button class="subsection accord">Главная</button> -->
+			<div class="hide">
+			
+				<table class="table table-bordered table-striped table-hover table-sm ">
+					<!-- table-responsive - адаптивность таблицы -->
+					
+					<tbody>
+					  <tr>
+						<th scope="row">Рабочий файл</th>
+						<td><input type="text" name="jobfile" class="vvod" id="jobfile1" placeholder="Шифр работы"></td>
+						<th scope="row">Пункт назначения / отправки</th>
+						<td><input type="text" name="Destination" class="vvod" id="Destination1" placeholder="Назначение"></td>
+					 </tr>
+					  <tr>
+						<th scope="row">Драфт сюрвей №</th>
+						<td><input type="number" min="1" max="30" name="ds#" class="vvod" id="ds#1" placeholder="Номер слоя"></td>
+						<th scope="row">Агент</th>
+						<td><input type="text" name="Agent" class="vvod" id="Agent1" placeholder="Агент"></td>
+					  </tr>
+					  <tr>
+						<th scope="row">Название теплохода</th>
+						<td><input type="text" name="Vessel" class="vvod" id="Vessel1" placeholder="Название теплохода"></td>
+						<th scope="row">Совместная работа</th>
+						<td><input type="text" name="Joint-Party" class="vvod" id="Joint-Party1" placeholder="Название фирмы"></td>		
+					  </tr>
+					  <tr>
+						<th scope="row">Порт/Терминал/Причал</th>
+						<td><input type="text" name="Port" class="vvod" id="Port1" placeholder="Порт/Терминал/Причал"></td>
+						<th scope="row">Другие фирмы</th>
+						<td><input type="text" name="Party" class="vvod" id="Party1" placeholder="Дригие фирмы"></td>
+					  </tr>
+					  
+					  <tr>
+						<th scope="row">Груз</th>
+							<td>
+								<input list="Commodity" name="comm" class="vvod" placeholder="Наименование груза">
+								<datalist id="Commodity">
+									<option>Пшеница</option>
+									<option>Ячмень</option>
+									<option>Кукуруза</option>
+									<option>Уголь</option>
+									<option>Рулоны</option>
+									<option>Слябы</option>
+								</datalist> 
+							</td>
+						<th scope="row">Вес груза по коносаменту</th>
+						<td><input type="number" name="tons" class="vvod" id="tons1" placeholder="Вес груза"></td>
+					  </tr>
+					  
+					  <tr>
+						<th scope="row">Клиент/Заказчик</th>
+						<td><input type="text" name="client" class="vvod" id="client1" placeholder="Клиент"></td>
+						<th scope="row">Инспектор
+						</th>
+						<td><input type="text" name="inspector" class="vvod" id="inspector1" placeholder="Инспектор"></td>
+					  </tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+
+			
+	<!-- ----------------2----------------- -->
+		<div class="section">
+			<p class="subsection accord">Действие</p>
+			
+			<div class="hide">
+					<table class="table table-bordered table-striped table-hover table-sm ">
+						<!-- table-responsive - адаптивность таблицы -->
+						
+						<tbody>
+						  <tr>
+							<th scope="row">Первичный DS начало работы</th>
+							<td><input type="datetime-local" name="InDS1" class="vvod" id="InDS11" placeholder="Дата и время начала"></td>
+							<th scope="row">Первичный DS окончание работы</th>
+							<td><input type="datetime-local" name="InDS2" class="vvod" id="InDS22" placeholder="Дата и время окончания"></td>
+						 </tr>
+						  <tr>
+							<th scope="row">Начало погрузки/разгрузки</th>
+							<td><input type="datetime-local" name="LD1" class="vvod" id="LD11" placeholder="Дата и время начала"></td>
+							<th scope="row">Окончание погрузки/разгрузки</th>
+							<td><input type="datetime-local" name="LD2" class="vvod" id="LD22" placeholder="Дата и время окончания"></td>
+						  </tr>
+						  <tr>
+							<th scope="row">Финальный DS начало работы</th>
+							<td><input type="datetime-local" name="FiDS1" class="vvod" id="FiDS11" placeholder="Дата и время начала"></td>
+							<th scope="row">Финальный DS окончание работы</th>
+							<td><input type="datetime-local" name="FiDS2" class="vvod" id="FiDS2" placeholder="Дата и время окончания"></td>		
+						  </tr>
+						</tbody>
+					</table>
+				
+			</div>
+		</div>
+		
+<!-- ------------------3--------------- -->
+		<div class="section">
+			<p class="subsection accord">Общие</p>
+			
+			<div class="hide">
+				<table class="table table-bordered table-striped table-hover table-sm ">
+					<!-- table-responsive - адаптивность таблицы -->
+					
+					<tbody>
+					  <tr>
+						<th scope="row">IMO №</th>
+						<td><input type="text" name="IMO" class="vvod" id="IMO" placeholder="IMO теплохода"></td>
+						<th scope="row">Флаг</th>
+						<td><input type="text" name="Flag" class="vvod" id="flag1" placeholder="Дата и время окончания"></td>
+					 </tr>
+					  <tr>
+						<th scope="row">Судовладелец</th>
+						<td><input type="text" name="Shipow" class="vvod" id="Shipow1" placeholder="Дата и время начала"></td>
+						<th scope="row">Порт регистрации</th>
+						<td><input type="text" name="Reg" class="vvod" id="Reg1" placeholder="Дата и время окончания"></td>
+					  </tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+		
+<!-- -----------------4---------------- -->
+		<div class="section">
+			<p class="subsection accord">Партикуляр</p>
+			
+			<div class="hide">
+				<table class="table table-bordered table-striped table-hover table-sm ">
+					<!-- table-responsive - адаптивность таблицы -->
+					
+					<tbody>
+					  <tr>
+						<th scope="row">Страна/Год постройки</th>
+						<td><input type="text" name="Countr" class="vvod" id="Countr1" placeholder="Страна и год постройки"></td>
+						<th scope="row">Последний сухой док</th>
+						<td><input type="text" name="Dock" class="vvod" id="Dock1" placeholder="Дата пследнего сухого дока"></td>
+					 </tr>
+					  <tr>
+						<th scope="row">GRT</th>
+						<td><input type="text" name="GRT" class="vvod" id="GRT1" placeholder="GRT"></td>
+						<th scope="row">NRT</th>
+						<td><input type="text" name="NRT" class="vvod" id="NRT1" placeholder="NRT"></td>
+					  </tr>
+					  <tr>
+						<th scope="row">Вес теплохода</th>
+						<td><input type="text" name="LSW" class="vvod" id="LSW1" placeholder="Light Ship Weight"></td>
+						<th scope="row">Обычная константа (по заявлению)</th>
+						<td><input type="text" name="Const" class="vvod" id="Const1" placeholder="Название фирмы"></td>		
+					  </tr>
+					  
+					</tbody>
+				</table> 
+			</div>
+		</div>
+		
+<!-- -----------------5---------------- -->
+		<div class="section">
+			<p class="subsection accord">Пресная вода</p>
+			
+			<div class="hide">
+				<table class="table table-bordered table-striped table-hover table-sm ">
+					<!-- table-responsive - адаптивность таблицы -->
+					
+					<tbody>
+					  <tr>
+						<th scope="row">Свободный борт</th>
+						<td><input type="text" name="Board" class="vvod" id="Board1" placeholder="Freeboard"></td>
+						<th scope="row">Допуск</th>
+						<td><input type="text" name="Allow" class="vvod" id="Allow1" placeholder="Allowance (FWA)"></td>
+					 </tr>
+					 					  
+					</tbody>
+				</table> 
+			</div>
+		</div>
+		
+<!-- ----------------6----------------- -->
+		<div class="section">
+			<p class="subsection accord">Летние данные</p>
+			
+			<div class="hide">
+				<table class="table table-bordered table-striped table-hover table-sm ">
+					<!-- table-responsive - адаптивность таблицы -->
+					
+					<tbody>
+					  <tr>
+						<th scope="row">Летняя осадка</th>
+						<td><input type="text" name="Draft" class="vvod" id="Draft1" placeholder="Sammer Draft"></td>
+						<th scope="row">DWT</th>
+						<td><input type="text" name="DWT" class="vvod" id="DWT1" placeholder="DWT"></td>
+					 </tr>
+					 <tr>
+						<th scope="row">TPC/TPI</th>
+						<td><input type="text" name="TPC" class="vvod" id="TPC1" placeholder="PTC/TPI"></td>
+						<th scope="row">Свободный борт</th>
+						<td><input type="text" name="Board2" class="vvod" id="Board22" placeholder="Freeboard"></td>
+					 </tr>
+					 					  
+					</tbody>
+				</table> 
+			</div>
+		</div>
+		
+<!-- ---------------7------------------ -->
+		<div class="section">
+			<p class="subsection accord">Геометрия</p>
+			
+			<div class="hide">
+				<table class="table table-bordered table-striped table-hover table-sm ">
+					<!-- table-responsive - адаптивность таблицы -->
+					
+					<tbody>
+					  <tr>
+						<th scope="row">LOA</th>
+						<td><input type="text" name="LOA" class="vvod" id="LOA1" placeholder="Страна и год постройки"></td>
+						<th scope="row">DWT</th>
+						<td><input type="text" name="DWT" class="vvod" id="DWT1" placeholder="Дата пследнего сухого дока"></td>
+					 </tr>
+					  <tr>
+						<th scope="row">Ширина</th>
+						<td><input type="text" name="Breadth" class="vvod" id="Breadth1" placeholder="Ширина теплохода"></td>
+						<th scope="row">Глубина</th>
+						<td><input type="text" name="Depth" class="vvod" id="Depth1" placeholder="Depth"></td>
+					  </tr>
+					  
+					</tbody>
+				</table> 
+
+				<table class="table table-bordered table-striped table-hover table-sm ">
+					<!-- table-responsive - адаптивность таблицы -->
+					
+					<tbody>
+					  
+					  <tr>
+						<th scope="row">Thickness of Keel F.</th>
+						<td><input type="text" name="KeelF" class="vvod" id="KeelF1" placeholder="Thickness of Keel F."></td>
+						<th scope="row">Thickness of Keel M.</th>
+						<td><input type="text" name="KeelM" class="vvod" id="KeelM1" placeholder="Thickness of Keel M."></td>
+						<th scope="row">Thickness of Keel A.</th>
+						<td><input type="text" name="KeelA" class="vvod" id="KeelA1" placeholder="Thickness of Keel A."></td>		
+					  </tr>
+					  
+					</tbody>
+				</table> 
+			</div>
+		</div>
+		
+
+	</div>
+	  <!-- ---------------Осадки & Расчет MMC----------   -->
+	<div id="tab2" class="tabcontent">
+		<p>Здесь размещаете любое содержание....2</p> 
+		<button class="load" onclick="OpenArhiv(event, 'tabArhiv')" href="html/load.html">Загрузить</button>
+		<button id="button-a">Create Excel</button>
+
+
+	</div>
+	  <!-- ---------------Гидростатика & Вес груза----------   -->
+	<div id="tab3" class="tabcontent">
+		<p>Здесь размещаете любое содержание....3</p>
+	</div>
+ <!-- ---------------Балласт & Пресная вода----------   -->
+	<div id="tab4" class="tabcontent">
+		<p>Здесь размещаете любое содержание....4</p>
+	</div>
+	<!-- ------------Замечания / Примечания--------------------- -->
+	<div id="tab5" class="tabcontent">
+		<p>Здесь размещаете любое содержание....5</p>
+	</div>
+<!-- ------------Вложенные документы--------------------- -->
+	<div id="tab6" class="tabcontent">
+		<p>Здесь размещаете любое содержание....6</p>
+	</div>
+<!-- ------------Крен & Наклон--------------------- -->
+	<div id="tab7" class="tabcontent">
+		<p>Здесь размещаете любое содержание....7</p>
+	</div>
+<!-- Меню 3 или табы конец-->
+
+
+
+
+
+
+
+
+
+<!-- <script src="js/jstoxls.js" -->
+
+	<footer>
+		<div class="header-bg min">
+			<p> <a href="#top"> Главная </a>                                  <!Для меню>
+				<a href="page-1.html"> Новости </a>
+				<!-- <a href="page-2.html"> Экология </a>
+				<a href="page-3.html"> Досуг </a>
+				<a href="page-4.html"> Законодательство </a> -->
+				<a href="page-5.html"> Форум </a>
+				<a href="page-6.html"> О проекте </a></p>
+		 </div>	
+		<p>© 2020 All rights reserved ©Ivanov BA</p>
+	</footer>
+		 
+	
+		<!-- Optional JavaScript -->
+    	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+		
+		<!-- -----------------------JQuery для работы кнопки возврата на верх и т.д -->	
+		<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+		<!-- Для экселя -->
+		<script  lang = " javascript "  src = " dist / xlsx.full.min.js "> </script>
+		<!-- Мой скрипт -->
+		<script lang="javascript" src="script/script.js"></script>
+	
+</body>
+</html>
