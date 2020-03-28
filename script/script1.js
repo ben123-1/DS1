@@ -20,7 +20,7 @@ function OpenTab(evt, tabName) {
 }
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();
-
+// document.getElementById("").click();
 // --------------------------------------------------------------------------------
 
 // Круглая кнопочка для возврата на верх страницы
@@ -43,7 +43,7 @@ jQuery(document).ready(function($){
     });
     // ------------------------------------------------------------------------------------------
 // Обработка АККАРДИОНА
-    var acc = document.getElementsByClassName("accord");
+    var acc = document.getElementsByClassName("accordion");
     var i;
     
     for (i = 0; i < acc.length; i++) {
@@ -64,6 +64,7 @@ jQuery(document).ready(function($){
     } 
     // Первая вкладка аккардиона при загрузке страницы уже раскрыта.
     document.getElementById("openMain").click();
+    // document.getElementsByClassName("accordion").toggle("active");
     // -------------------------------------------------------------------------------
 
 // ---------Считывание файла .xls не .xlsx---------------------------------------------------
