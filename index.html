@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 	<!-- Required meta tags -->
@@ -23,8 +23,8 @@
 	<header class="mainmenu" id="mainmeny">
 		<div class="header-bg header-bg img">
 			<div class="title"> 
-				       <! Логотип и название сайта>
-				<p><h1><img src="Images/loadmark.jpg" width="30pxl" height="30pxl" alt="Картинка-символ сайта">Draft Survey</h1></p>
+			 <p><h1><img src="Images/loadmark.jpg" width="30pxl" height="30pxl"
+				alt="Картинка-символ сайта">Draft Survey</h1>  </p>        <! Логотип и название сайта>
 			</div>
 			<p> <a href="#top"> Главная </a>                                  <!Для меню>
 				<a href="html/page-1.html"> Новости </a>
@@ -56,25 +56,25 @@
 		<button class="tablinks" onclick="OpenTab(event, 'tab4')">Балласт & Пресная вода</button>
 		<button class="tablinks" onclick="OpenTab(event, 'tab5')">Замечания / Примечания</button>
 		<button class="tablinks" onclick="OpenTab(event, 'tab6')">Вложенные документы</button>
-		<button class="tablinks" onclick="OpenTab(event, 'tab7')">Крен & Наклон</button>
+		<button class="tablinks" onclick="OpenTab(event, 'tab7')">Крен & Дифферент</button>
 	</div>
 
-	<!-- --------------Основные----------   -->		
+	<!-- -------------1-Основные----------   -->		
 	<div id="tab1" class="tabcontent">
 
-		<!-- ---------------0----Для свертывания / развертывания всех элементов-------------- -->
+		<!-- ---------------1.0----Для свертывания / развертывания всех элементов-------------- -->
 	
 		<div class="section">
-			<p class="subsection accord openHide" id="openHideAll">Развернуть / Свернуть</p> 
+			<p class="subsection accordion openHide" id="openHideAll">Развернуть / Свернуть</p> 
 			<div class="hide"></div>
 
 		</div>
-		<!-- ---------------1------------------ -->
+		<!-- ---------------1.1------------------ -->
 
 		<div class="section">
-			<p class="subsection accord" id="openMain">Главная </p> 
+			<p class="subsection accordion defopen" id="openMain">Главная </p> 
 			<!-- <button class="button button1">Главная</button> -->
-			<!-- <button class="subsection accord">Главная</button> -->
+			<!-- <button class="subsection accordion">Главная</button> -->
 			<div class="hide">
 			
 				<table class="table table-bordered table-striped table-hover table-sm ">
@@ -137,9 +137,9 @@
 
 
 			
-	<!-- ----------------2----------------- -->
+	<!-- ----------------1.2----------------- -->
 		<div class="section">
-			<p class="subsection accord">Действие</p>
+			<p class="subsection accordion">Действие</p>
 			
 			<div class="hide">
 					<table class="table table-bordered table-striped table-hover table-sm ">
@@ -153,9 +153,9 @@
 							<td><input type="datetime-local" name="InDS2" class="vvod" id="InDS22" placeholder="Дата и время окончания"></td>
 						 </tr>
 						  <tr>
-							<th scope="row">Начало погрузки/разгрузки</th>
+							<th scope="row">Начало погрузки/выгрузки</th>
 							<td><input type="datetime-local" name="LD1" class="vvod" id="LD11" placeholder="Дата и время начала"></td>
-							<th scope="row">Окончание погрузки/разгрузки</th>
+							<th scope="row">Окончание погрузки/выгрузки</th>
 							<td><input type="datetime-local" name="LD2" class="vvod" id="LD22" placeholder="Дата и время окончания"></td>
 						  </tr>
 						  <tr>
@@ -170,9 +170,9 @@
 			</div>
 		</div>
 		
-<!-- ------------------3--------------- -->
+<!-- ------------------1.3--------------- -->
 		<div class="section">
-			<p class="subsection accord">Общие</p>
+			<p class="subsection accordion">Общие</p>
 			
 			<div class="hide">
 				<table class="table table-bordered table-striped table-hover table-sm ">
@@ -183,13 +183,13 @@
 						<th scope="row">IMO №</th>
 						<td><input type="text" name="IMO" class="vvod" id="IMO" placeholder="IMO теплохода"></td>
 						<th scope="row">Флаг</th>
-						<td><input type="text" name="Flag" class="vvod" id="flag1" placeholder="Дата и время окончания"></td>
+						<td><input type="text" name="Flag" class="vvod" id="flag1" placeholder="Под каким флагом"></td>
 					 </tr>
 					  <tr>
 						<th scope="row">Судовладелец</th>
-						<td><input type="text" name="Shipow" class="vvod" id="Shipow1" placeholder="Дата и время начала"></td>
-						<th scope="row">Порт регистрации</th>
-						<td><input type="text" name="Reg" class="vvod" id="Reg1" placeholder="Дата и время окончания"></td>
+						<td><input type="text" name="Shipow" class="vvod" id="Shipow1" placeholder="Судовладелец"></td>
+						<th scope="row">Порт приписки</th>
+						<td><input type="text" name="Reg" class="vvod" id="Reg1" placeholder="Порт приписки"></td>
 					  </tr>
 					</tbody>
 				</table>
@@ -197,9 +197,9 @@
 		</div>
 
 		
-<!-- -----------------4---------------- -->
+<!-- -----------------1.4---------------- -->
 		<div class="section">
-			<p class="subsection accord">Партикуляр</p>
+			<p class="subsection accordion">Партикуляр</p>
 			
 			<div class="hide">
 				<table class="table table-bordered table-striped table-hover table-sm ">
@@ -209,8 +209,8 @@
 					  <tr>
 						<th scope="row">Страна/Год постройки</th>
 						<td><input type="text" name="Countr" class="vvod" id="Countr1" placeholder="Страна и год постройки"></td>
-						<th scope="row">Последний сухой док</th>
-						<td><input type="text" name="Dock" class="vvod" id="Dock1" placeholder="Дата пследнего сухого дока"></td>
+						<th scope="row">Дата последнего сухого дока</th>
+						<td><input type="date" name="Dock" class="vvod" id="Dock1" placeholder="Дата пследнего сухого дока"></td>
 					 </tr>
 					  <tr>
 						<th scope="row">GRT</th>
@@ -222,7 +222,7 @@
 						<th scope="row">Вес теплохода</th>
 						<td><input type="text" name="LSW" class="vvod" id="LSW1" placeholder="Light Ship Weight"></td>
 						<th scope="row">Обычная константа (по заявлению)</th>
-						<td><input type="text" name="Const" class="vvod" id="Const1" placeholder="Название фирмы"></td>		
+						<td><input type="text" name="Const" class="vvod" id="Const1" placeholder="Константа"></td>		
 					  </tr>
 					  
 					</tbody>
@@ -230,9 +230,9 @@
 			</div>
 		</div>
 		
-<!-- -----------------5---------------- -->
+<!-- -----------------1.5---------------- -->
 		<div class="section">
-			<p class="subsection accord">Пресная вода</p>
+			<p class="subsection accordion">Пресная вода</p>
 			
 			<div class="hide">
 				<table class="table table-bordered table-striped table-hover table-sm ">
@@ -251,9 +251,364 @@
 			</div>
 		</div>
 		
-<!-- ----------------6----------------- -->
+<!-- ----------------1.6----------------- -->
 		<div class="section">
-			<p class="subsection accord">Летние данные</p>
+			<p class="subsection accordion">Летние данные</p>
+			
+			<div class="hide">
+				<table class="table table-bordered table-striped table-hover table-sm ">
+					<!-- table-responsive - адаптивность таблицы -->
+					
+					<tbody>
+					  <tr>
+						<th scope="row">Летняя осадка</th>
+						<td><input type="text" name="Draft" class="vvod" id="Draft1" placeholder="Sammer Draft"></td>
+						<th scope="row">DWT</th>
+						<td><input type="text" name="DWT" class="vvod" id="DWT1" placeholder="DWT"></td>
+					 </tr>
+					 <tr>
+						<th scope="row">TPC/TPI</th>
+						<td><input type="text" name="TPC" class="vvod" id="TPC1" placeholder="TPC или TPI"></td>
+						<th scope="row">Свободный борт</th>
+						<td><input type="text" name="Board2" class="vvod" id="Board22" placeholder="Freeboard"></td>
+					 </tr>
+					 					  
+					</tbody>
+				</table> 
+			</div>
+		</div>
+		
+<!-- ---------------1.7------------------ -->
+		<div class="section">
+			<p class="subsection accordion">Геометрия</p>
+			
+			<div class="hide">
+				<table class="table table-bordered table-striped table-hover table-sm ">
+					<!-- table-responsive - адаптивность таблицы -->
+					
+					<tbody>
+					  <tr>
+						<th scope="row">LOA</th>
+						<td><input type="text" name="LOA" class="vvod" id="LOA1" placeholder="LOA"></td>
+						<th scope="row">LBP</th>
+						<td><input type="text" name="LBP" class="vvod" id="LBP1" placeholder="Растояние между перпендикулярами"></td>
+					 </tr>
+					  <tr>
+						<th scope="row">Ширина</th>
+						<td><input type="text" name="Breadth" class="vvod" id="Breadth1" placeholder="Ширина теплохода"></td>
+						<th scope="row">Глубина</th>
+						<td><input type="text" name="Depth" class="vvod" id="Depth1" placeholder="Depth"></td>
+					  </tr>
+					  
+					</tbody>
+				</table> 
+
+				<table class="table table-bordered table-striped table-hover table-sm ">
+					<!-- table-responsive - адаптивность таблицы -->
+					
+					<tbody>
+					  
+					  <tr>
+						<th scope="row">Thickness of Keel F.</th>
+						<td><input type="text" name="KeelF" class="vvod" id="KeelF1" placeholder="Thickness of Keel F."></td>
+						<th scope="row">Thickness of Keel M.</th>
+						<td><input type="text" name="KeelM" class="vvod" id="KeelM1" placeholder="Thickness of Keel M."></td>
+						<th scope="row">Thickness of Keel A.</th>
+						<td><input type="text" name="KeelA" class="vvod" id="KeelA1" placeholder="Thickness of Keel A."></td>		
+					  </tr>
+					  
+					</tbody>
+				</table> 
+			</div>
+		</div>
+		
+
+	</div>
+	  <!-- -------------2--Осадки & Расчет MMC----------   -->
+	<div id="tab2" class="tabcontent">
+		
+		<!-- ---------------2.0----Для свертывания / развертывания всех элементов-------------- -->
+		<div class="section">
+			<p class="subsection accordion openHide" id="openHideAll">Развернуть / Свернуть</p> 
+			<div class="hide"></div>
+		</div>
+
+		<!-- ---------------2.1------------------ -->
+		<div class="section">
+			<p class="subsection accordion defopen" id="openMain">Измерение осадок</p> 
+			<div class="hide table-responsive table-responsive-sm table-responsive-md table-responsive-lg table-responsive-xl">
+			
+				<table class="table table-bordered table-striped table-hover table-sm ">
+					<!-- table-responsive - адаптивность таблицы -->
+					<tbody>
+					  <tr class="table-info" align="center">
+						<th rowspan="2" scope="col"></th>
+						<th colspan="2" scope="colgroup">Начальные измерения </th>
+						<th colspan="2" scope="colgroup">Финальные измерения </th>
+					  </tr>
+					  <tr class="table-info" align="center">
+						<!-- <th scope="row"></th> -->
+						<th scope="row">Левый борт</th>
+						<th scope="row">Правый борт</th>
+						<th scope="row">Левый борт</th>
+						<th scope="row">Правый борт</th>
+					  </tr>
+
+
+					  <tr>
+						<th scope="row" class="table-info">Нос</th>
+						<td><input type="text" name="foreL1" class="vvod" id="foreL11" placeholder="Осадка левый борт нос"></td>
+						<td><input type="text" name="foreR1" class="vvod" id="foreR11" placeholder="Осадка правый борт нос"></td>
+						<td><input type="text" name="foreL2" class="vvod" id="foreL21" placeholder="Осадка левый борт нос"></td>
+						<td><input type="text" name="foreR2" class="vvod" id="foreR21" placeholder="Осадка правый борт нос"></td>
+					  </tr>
+					  <tr>	
+						<th scope="row" class="table-info">Средина</th>
+						<td><input type="text" name="midL1" class="vvod" id="midL11" placeholder="Осадка левый борт средина"></td>
+						<td><input type="text" name="midR1" class="vvod" id="midR11" placeholder="Осадка правый борт средина"></td>
+						<td><input type="text" name="midL2" class="vvod" id="midL21" placeholder="Осадка левый борт средина"></td>
+						<td><input type="text" name="midR2" class="vvod" id="midR21" placeholder="Осадка правый борт средина"></td>
+					  </tr>
+					  <tr>	
+						<th scope="row" class="table-info">Корма</th>
+						<td><input type="text" name="aftL1" class="vvod" id="aftL11" placeholder="Осадка левый борт корма"></td>
+						<td><input type="text" name="aftR1" class="vvod" id="aftR11" placeholder="Осадка правый борт корма"></td>
+						<td><input type="text" name="aftL2" class="vvod" id="aftL21" placeholder="Осадка левый борт корма"></td>
+						<td><input type="text" name="aftR2" class="vvod" id="aftR21" placeholder="Осадка правый борт корма"></td>
+					  </tr>
+					  
+					</tbody>
+				</table>
+			</div>
+			
+		</div>
+
+
+			
+	<!-- ----------------2.2----------------- -->
+		<div class="section">
+			<p class="subsection accordion">Состояние моря</p>
+			
+			<div class="hide">
+					<table class="table table-bordered table-striped table-hover table-sm ">
+						<!-- table-responsive - адаптивность таблицы -->
+						
+						<tbody>
+							<tr class="table-info" align="center">
+								<!-- <th rowspan="2" scope="col"></th> -->
+								<th colspan="2" scope="colgroup">Начальные измерения </th>
+								<th colspan="2" scope="colgroup">Финальные измерения </th>
+							  </tr>
+						  <tr>
+							<th scope="row"><span><input class="hend" type="radio" name="swel1" value="swel1" checked="checked" >Штиль</span>
+								<span><input class="hend" type="radio" name="swel1" value="swel1">Волна</span></th>
+							<td><input type="text" name="swelI2" class="vvod" id="swelI22" placeholder="Высота волны"></td>
+							<th scope="row"><span><input class="hend" type="radio" name="swel2" value="swel2" checked="checked">Штиль</span>
+								<span><input class="hend" type="radio" name="swel2" value="swel2">Волна</span></th>
+							<td><input type="text" name="swelI4" class="vvod" id="swelI44" placeholder="Высота волны"></td>
+						 </tr>
+						  
+						  
+						</tbody>
+					</table>
+				
+			</div>
+		</div>
+		
+<!-- ------------------2.3--------------- -->
+		<div class="section">
+			<p class="subsection accordion">Отстояние между марками осадок и перпендикулярами</p>
+			
+			<div class="hide table-responsive table-responsive-sm table-responsive-md table-responsive-lg table-responsive-xl">
+			
+				<table class="table table-bordered table-striped table-hover table-sm ">
+					<!-- table-responsive - адаптивность таблицы -->
+					<tbody>
+					  <tr class="table-info" align="center">
+						<th scope="col"></th>
+						<th colspan="2" scope="colgroup">Начальные измерения </th>
+						<th colspan="2" scope="colgroup">Финальные измерения </th>
+					  </tr>
+					  
+
+					  <tr>
+						<th scope="row" class="table-info">Нос</th>
+						<td><input type="text" name="dforeL1" class="vvod" id="dforeL11" placeholder="Отстояние"></td>
+						<td><input type="text" name="dforeR1" class="vvod" id="dforeR11" placeholder=""></td>
+						<td><input type="text" name="dforeL2" class="vvod" id="dforeL21" placeholder="Отстояние"></td>
+						<td><input type="text" name="dforeR2" class="vvod" id="dforeR21" placeholder=""></td>
+					  </tr>
+					  <tr>	
+						<th scope="row" class="table-info">Средина левый борт</th>
+						<td><input type="text" name="dlmidL1" class="vvod" id="dlmidL11" placeholder="Отстояние"></td>
+						<td><input type="text" name="dlmidR1" class="vvod" id="dlmidR11" placeholder=""></td>
+						<td><input type="text" name="dlmidL2" class="vvod" id="dlmidL21" placeholder="Отстояние"></td>
+						<td><input type="text" name="dlmidR2" class="vvod" id="dlmidR21" placeholder=""></td>
+					  </tr>
+					  <tr>	
+						<th scope="row" class="table-info">Средина правый борт</th>
+						<td><input type="text" name="drmidL1" class="vvod" id="drmidL11" placeholder="Отстояние"></td>
+						<td><input type="text" name="drmidR1" class="vvod" id="drmidR11" placeholder=""></td>
+						<td><input type="text" name="drmidL2" class="vvod" id="drmidL21" placeholder="Отстояние"></td>
+						<td><input type="text" name="drmidR2" class="vvod" id="drmidR21" placeholder=""></td>
+					  </tr>
+					  <tr>	
+						<th scope="row" class="table-info">Корма</th>
+						<td><input type="text" name="daftL1" class="vvod" id="daftL11" placeholder="Отстояние"></td>
+						<td><input type="text" name="daftR1" class="vvod" id="daftR11" placeholder=""></td>
+						<td><input type="text" name="daftL2" class="vvod" id="daftL21" placeholder="Отстояние"></td>
+						<td><input type="text" name="daftR2" class="vvod" id="daftR21" placeholder=""></td>
+					  </tr>
+					  
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+		
+<!-- -----------------2.4---------------- -->
+		<div class="section">
+			<p class="subsection accordion">Результаты</p>
+			
+			<div class="hide table-responsive table-responsive-sm table-responsive-md table-responsive-lg table-responsive-xl">
+			
+				<table class="table table-bordered table-striped table-hover table-sm ">
+					<!-- table-responsive - адаптивность таблицы -->
+					<tbody>
+					  <tr class="table-info" align="center">
+						<th rowspan="2" scope="col"></th>
+						<th colspan="2" scope="colgroup">Начальный расчет</th>
+						<th colspan="2" scope="colgroup">Финальный расчет</th>
+					  </tr>
+					  <tr class="table-info" align="center">
+						<!-- <th scope="row"></th> -->
+						<th scope="row">Левый борт</th>
+						<th scope="row">Правый борт</th>
+						<th scope="row">Левый борт</th>
+						<th scope="row">Правый борт</th>
+					  </tr>
+
+
+					  <tr>
+						<th scope="row" class="table-info">Нос</th>
+						<td><input type="text" name="fforeL1" class="vvod" id="fforeL11" placeholder="Осадка левый борт нос" readonly ></td>
+						<td><input type="text" name="fforeR1" class="vvod" id="fforeR11" placeholder="Осадка правый борт нос" readonly></td>
+						<td><input type="text" name="fforeL2" class="vvod" id="fforeL21" placeholder="Осадка левый борт нос" readonly></td>
+						<td><input type="text" name="fforeR2" class="vvod" id="fforeR21" placeholder="Осадка правый борт нос" readonly></td>
+					  </tr>
+					  <tr>
+						<th scope="row" class="table-info">Нос среднее значение</th>
+						<td colspan="2" ><input type="text" name="mforeL1" class="vvod" id="mforeL11" placeholder="Среднее значение нос" readonly></td>
+						<td colspan="2"><input type="text" name="mforeL2" class="vvod" id="mforeL21" placeholder="Среднее значение нос" readonly></td>
+					  </tr>
+					  <tr>
+						<th scope="row" class="table-info">Коррекция нос</th>
+						<td colspan="2" ><input type="text" name="сforeL1" class="vvod" id="сforeL11" placeholder="Коррекция нос" readonly></td>
+						<td colspan="2"><input type="text" name="сforeL2" class="vvod" id="сforeL21" placeholder="Коррекция нос" readonly></td>
+					  </tr>
+					  <tr>
+						<th scope="row" class="table-info">Нос с учетом коррекции</th>
+						<td colspan="2" ><input type="text" name="сmforeL1" class="vvod" id="сmforeL11" placeholder="Нос с учетом коррекции" readonly></td>
+						<td colspan="2"><input type="text" name="сmforeL2" class="vvod" id="сmforeL21" placeholder="Нос с учетом коррекции" readonly></td>
+					  </tr>
+					  <tr>	
+						<th scope="row" class="table-info">Средина</th>
+						<td><input type="text" name="fmidL1" class="vvod" id="fmidL11" placeholder="Осадка левый борт средина" readonly></td>
+						<td><input type="text" name="fmidR1" class="vvod" id="fmidR11" placeholder="Осадка правый борт средина" readonly></td>
+						<td><input type="text" name="fmidL2" class="vvod" id="fmidL21" placeholder="Осадка левый борт средина" readonly></td>
+						<td><input type="text" name="fmidR2" class="vvod" id="fmidR21" placeholder="Осадка правый борт средина" readonly></td>
+					  </tr>
+					  <tr>	
+						<th scope="row" class="table-info">Коррекция средина</th>
+						<td><input type="text" name="cmidL1" class="vvod" id="cmidL11" placeholder="Коррекция средина" readonly></td>
+						<td><input type="text" name="cmidR1" class="vvod" id="cmidR11" placeholder="Коррекция средина" readonly></td>
+						<td><input type="text" name="cmidL2" class="vvod" id="cmidL21" placeholder="Коррекция средина" readonly></td>
+						<td><input type="text" name="cmidR2" class="vvod" id="cmidR21" placeholder="Коррекция средина" readonly></td>
+					  </tr>
+					  <tr>	
+						<th scope="row" class="table-info">Средина с учетом коррекции</th>
+						<td><input type="text" name="cfmidL1" class="vvod" id="cfmidL11" placeholder="Средина с учетом коррекции" readonly></td>
+						<td><input type="text" name="cfmidR1" class="vvod" id="cfmidR11" placeholder="Средина с учетом коррекции" readonly></td>
+						<td><input type="text" name="cfmidL2" class="vvod" id="cfmidL21" placeholder="Средина с учетом коррекции" readonly></td>
+						<td><input type="text" name="cfmidR2" class="vvod" id="cfmidR21" placeholder="Средина с учетом коррекции" readonly></td>
+					  </tr>
+					  <tr>	
+						<th scope="row" class="table-info">Средина среднее с учетом коррекции</th>
+						<td colspan="2"><input type="text" name="mfmidL1" class="vvod" id="mfmidL11" placeholder="Средина с учетом коррекции" readonly></td>
+						<td colspan="2"><input type="text" name="mfmidL2" class="vvod" id="mfmidL21" placeholder="Средина с учетом коррекции" readonly></td>
+					  </tr>
+					  <tr>	
+						<th scope="row" class="table-info">Корма</th>
+						<td><input type="text" name="faftL1" class="vvod" id="faftL11" placeholder="Осадка левый борт корма" readonly></td>
+						<td><input type="text" name="faftR1" class="vvod" id="faftR11" placeholder="Осадка правый борт корма" readonly></td>
+						<td><input type="text" name="faftL2" class="vvod" id="faftL21" placeholder="Осадка левый борт корма" readonly></td>
+						<td><input type="text" name="faftR2" class="vvod" id="faftR21" placeholder="Осадка правый борт корма" readonly></td>
+					  </tr>
+					  <tr>	
+						<th scope="row" class="table-info">Корма среднее значение</th>
+						<td colspan="2"><input type="text" name="maftL1" class="vvod" id="maftL11" placeholder="Корма среднее значение" readonly></td>
+						<td colspan="2"><input type="text" name="maftL2" class="vvod" id="maftL21" placeholder="Корма среднее значение" readonly></td>
+					  </tr>
+					  <tr>	
+						<th scope="row" class="table-info">Коррекция корма</th>
+						<td colspan="2"><input type="text" name="сaftL1" class="vvod" id="сaftL11" placeholder="Коррекция корма" readonly></td>
+						<td colspan="2"><input type="text" name="сaftL2" class="vvod" id="сaftL21" placeholder="Коррекция корма" readonly></td>
+					  </tr>
+					  <tr>	
+						<th scope="row" class="table-info">Корма с учетом коррекции</th>
+						<td colspan="2"><input type="text" name="сmaftL1" class="vvod" id="сmaftL11" placeholder="Корма с учетом коррекции" readonly></td>
+						<td colspan="2"><input type="text" name="сmaftL2" class="vvod" id="сmaftL21" placeholder="Корма с учетом коррекции" readonly></td>
+					  </tr>
+					  <tr>	
+						<th scope="row" class="table-info">Среднее между носом и кормой</th>
+						<td colspan="2"><input type="text" name="mfa1" class="vvod" id="mfa11" placeholder="Среднее между носом и кормой" readonly></td>
+						<td colspan="2"><input type="text" name="mfa2" class="vvod" id="mfa21" placeholder="Среднее между носом и кормой" readonly></td>
+					  </tr>
+					  <tr>	
+						<th scope="row" class="table-info">Среднее значение</th>
+						<td colspan="2"><input type="text" name="mmfa1" class="vvod" id="mmfa11" placeholder="Среднее значение" readonly></td>
+						<td colspan="2"><input type="text" name="mmfa2" class="vvod" id="mmfa21" placeholder="Среднее значение" readonly></td>
+					  </tr>
+					  <tr>	
+						<th scope="row" class="table-info">Среднее из средних</th>
+						<td colspan="2"><input type="text" name="mmсfa1" class="vvod" id="mmсfa11" placeholder="Среднее из средних" readonly></td>
+						<td colspan="2"><input type="text" name="mmсfa2" class="vvod" id="mmсfa21" placeholder="Среднее из средних" readonly></td>
+					  </tr>
+					  <tr>	
+						<th scope="row" class="table-info">Среднее из средних расчитаное от борта</th>
+						<td colspan="2"><input type="text" name="mmсbfa1" class="vvod" id="mmсbfa11" placeholder="Среднее из средних" readonly></td>
+						<td colspan="2"><input type="text" name="mmсbfa2" class="vvod" id="mmсbfa21" placeholder="Среднее из средних" readonly></td>
+					  </tr>
+					  
+					</tbody>
+				</table>
+			</div>
+		</div>
+		
+<!-- -----------------2.5---------------- -->
+		<div class="section">
+			<p class="subsection accordion">Пресная вода</p>
+			
+			<div class="hide">
+				<table class="table table-bordered table-striped table-hover table-sm ">
+					<!-- table-responsive - адаптивность таблицы -->
+					
+					<tbody>
+					  <tr>
+						<th scope="row">Свободный борт</th>
+						<td><input type="text" name="Board" class="vvod" id="Board1" placeholder="Freeboard"></td>
+						<th scope="row">Допуск</th>
+						<td><input type="text" name="Allow" class="vvod" id="Allow1" placeholder="Allowance (FWA)"></td>
+					 </tr>
+					 					  
+					</tbody>
+				</table> 
+			</div>
+		</div>
+		
+<!-- ----------------2.6----------------- -->
+		<div class="section">
+			<p class="subsection accordion">Летние данные</p>
 			
 			<div class="hide">
 				<table class="table table-bordered table-striped table-hover table-sm ">
@@ -278,9 +633,9 @@
 			</div>
 		</div>
 		
-<!-- ---------------7------------------ -->
+<!-- ---------------2.7------------------ -->
 		<div class="section">
-			<p class="subsection accord">Геометрия</p>
+			<p class="subsection accordion">Геометрия</p>
 			
 			<div class="hide">
 				<table class="table table-bordered table-striped table-hover table-sm ">
@@ -321,34 +676,26 @@
 				</table> 
 			</div>
 		</div>
-		
-
 	</div>
-	  <!-- ---------------Осадки & Расчет MMC----------   -->
-	<div id="tab2" class="tabcontent">
-		<p>Здесь размещаете любое содержание....2</p> 
-		<button class="load" onclick="OpenArhiv(event, 'tabArhiv')" href="html/load.html">Загрузить</button>
-		<button id="button-a">Create Excel</button>
-
-
-	</div>
-	  <!-- ---------------Гидростатика & Вес груза----------   -->
+	  <!-- --------------3-Гидростатика & Вес груза----------   -->
 	<div id="tab3" class="tabcontent">
 		<p>Здесь размещаете любое содержание....3</p>
+		<button class="load" onclick="OpenArhiv(event, 'tabArhiv')" href="html/load.html">Загрузить</button>
+		<button id="button-a">Create Excel</button>
 	</div>
- <!-- ---------------Балласт & Пресная вода----------   -->
+ <!-- --------------4-Балласт & Пресная вода----------   -->
 	<div id="tab4" class="tabcontent">
 		<p>Здесь размещаете любое содержание....4</p>
 	</div>
-	<!-- ------------Замечания / Примечания--------------------- -->
+	<!-- -----------5-Замечания / Примечания--------------------- -->
 	<div id="tab5" class="tabcontent">
 		<p>Здесь размещаете любое содержание....5</p>
 	</div>
-<!-- ------------Вложенные документы--------------------- -->
+<!-- ----------6--Вложенные документы--------------------- -->
 	<div id="tab6" class="tabcontent">
 		<p>Здесь размещаете любое содержание....6</p>
 	</div>
-<!-- ------------Крен & Наклон--------------------- -->
+<!-- ----------7--Крен & Наклон--------------------- -->
 	<div id="tab7" class="tabcontent">
 		<p>Здесь размещаете любое содержание....7</p>
 	</div>
@@ -387,9 +734,11 @@
 		<!-- -----------------------JQuery для работы кнопки возврата на верх и т.д -->	
 		<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 		<!-- Для экселя -->
-		<!--<script  lang = " javascript "  src = " dist / xlsx.full.min.js "> </script> -->
+		<script  lang = " javascript "  src = " dist / xlsx.full.min.js "> </script>
 		<!-- Мой скрипт -->
-		<script lang="javascript" src="script/script.js"></script>
+		<script lang="javascript" src="script.js"></script>
+		<script lang="javascript" src="script/script1.js"></script>
+		
 	
 </body>
 </html>
