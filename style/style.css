@@ -2,7 +2,7 @@
 body 
  {
     /* background-color: gainsboro; */
-    /*background-image: url(../images/map.jpg);*/
+    background-image: url(../Images/map.jpg);
     width: 75%;
     margin: auto;
     font-size: 0.75rem;
@@ -19,7 +19,7 @@ body
  {
   display: block;
   margin: auto;
-  background-image: url("../Images/Boris-Butoma.jpg");
+  background-image: url(../images/Boris-Butoma.jpg);
   background-repeat: no-repeat;
 
   background-size: contain;
@@ -73,6 +73,9 @@ body
  
 /* --------------------------------------------------------------------- */
 /* Оформление меню   */
+.tab{
+  display: flex;
+}
 .tab button.active
     {
       /* background-color: rgb(236, 236, 236); */
@@ -131,7 +134,7 @@ body
   
 /* Кнопки свертыввания разделов на вкладках АККАРДИОН*/
 /* Style the buttons that are used to open and close the accordion panel */
-.accord {
+.accordion {
   /* background-color: #eee;
   color: #444; */
   cursor: pointer;
@@ -143,13 +146,13 @@ body
   transition: 0.4s;
 }
 
-.accord:hover {
+.accordion:hover {
   background-image: linear-gradient(to right, deepskyblue,  rgb(229, 245, 250));
   color: black; 
 }
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-.active.accord:hover {
+.active.accordion:hover {
   background-image: linear-gradient(to right, deepskyblue,  rgb(229, 245, 250));
   color: black; 
 }
@@ -162,7 +165,8 @@ body
   overflow: hidden;
   transition: max-height 0.2s ease-out;
 }
-.accord:after {
+/* .hide1 {display: table;} */
+.accordion:after {
   content: '\02795'; /* Unicode character for "plus" sign (+) */
   /* font-size: 13px; */
   color: #777;
@@ -170,7 +174,7 @@ body
   margin-left: 5px;
 }
 
-.active.accord:after {
+.active.accordion:after {
   content: "\2796"; /* Unicode character for "minus" sign (-) */
 }
 
