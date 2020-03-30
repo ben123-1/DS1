@@ -1,13 +1,35 @@
-/* Подложка серого цветв */
 body 
  {
     /* background-color: gainsboro; */
-    background-image: url(../Images/map.jpg);
-    width: 75%;
-    margin: auto;
-    font-size: 0.75rem;
+    /* background-image: url(../Images/map.jpg); */
+    /* opacity: 0.8; */
+    background: url('../Images/map.jpg'), rgba(255,255,255,0.3);
+background-blend-mode: color;
+  
+    /* Фон зафиксирован в области просмотра и потому не двигается, когда высота контента превышает высоту изображения */
+    /* background-attachment: fixed; */
+    
  }
-
+.general {
+  width: 75%;
+  margin: auto;
+  font-size: 0.75rem;
+}
+/* 768px */
+@media screen and (max-width: 576px)
+  {
+    .general
+    {
+      width: 98%;
+    }
+  }
+  @media screen and (max-width: 768px)
+  {
+    .general
+    {
+      width: 98%;
+    }
+  }
  /* header { */
   
   
@@ -17,22 +39,57 @@ body
  /* } */
  .mainmenu 
  {
-  display: block;
-  margin: auto;
-  background-image: url(../images/Boris-Butoma.jpg);
+  /* display: block;
+  margin: auto; */
+  background-image: url(../images/Boris-Butoma.png);
+  height: 200px;
+  /* Высота шапки 14.146rem*/
+  background-clip: border-box;
+  /* Фоновое изображение всегда отцентрировано по вертикали и горизонтали */
+  background-position: center;
+    /* Фоновое изображение не повторяется */
   background-repeat: no-repeat;
-
+    /* Фоновое изображение зафиксировано в окне просмотра, поэтому оно не смещается, когда высота контента больше высоты изображения */
+  /* background-attachment: fixed; */
+    /* Вот что позволяет фоновому изображению подстраиваться под размер контейнера */
   background-size: contain;
-  /* background-size: 100%; */
-  height: 15rem; /*Высота шапки */
+    /* Устанавливает фоновый цвет, который будет отображаться, пока загружается фоновое изображение */
+  /* background-color: #464646; */
   
   text-align: center; /*Выравнивание по центру */
+  font-weight: bold;
+  font-size: 1.2rem;
  }
+ @media screen and (max-width: 576px)
+ {
+  .mainmenu 
+   {
+    height: 100px;
+    font-size: 1rem;
+   }
+ }
+ @media screen and (max-width: 768px)
+ {
+  .mainmenu 
+   {
+    height: 100px;
+   }
+ }
+
+
+
  
- .header-bg img {
-  position: relative; /* Относительное позиционирование */
+ .header-bg {
+   /* Относительное позиционирование */
+  position: relative; 
   
- }     */
+ }
+ .title {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+  
+ }
 /* Адаптивный шрифт от бутстрап
  html {
   font-size: 1rem;
@@ -64,6 +121,9 @@ body
   font-size: 1rem;
   /* Появляется рука при наведении на чекбокс или подпись */
   cursor: pointer; 
+  background-color: gainsboro;
+  opacity: 0;
+  font-weight: bold;
  }
  .hend 
  {
@@ -74,8 +134,20 @@ body
 /* --------------------------------------------------------------------- */
 /* Оформление меню   */
 .tab{
-  display: flex;
+  display:flexbox;
+  flex-wrap: wrap;
+  /* flex-shrink: 1; */
+  /* flex-direction: column; */
+  align-content: flex-start;
 }
+
+  /* @media screen and (max-width: 576px)
+  {
+    .tab
+    {
+      flex-direction: column;
+    }
+  } */
 .tab button.active
     {
       /* background-color: rgb(236, 236, 236); */
