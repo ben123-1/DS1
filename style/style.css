@@ -41,7 +41,7 @@ background-blend-mode: color;
  {
   /* display: block;
   margin: auto; */
-  background-image: url(../images/Boris-Butoma.png);
+  background-image: url(../Images/Boris-Butoma.png);
   height: 200px;
   /* Высота шапки 14.146rem*/
   background-clip: border-box;
