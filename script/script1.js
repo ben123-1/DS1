@@ -1,26 +1,27 @@
-$(document).ready(function(){	
+
+// $(document).ready(function(){	
 			
-});
-// Обработка страниц при нажатии на кнопку/ярычок таба 
-function OpenTab(evt, tabName) {
-    var i, tabcontent, tablinks;
+// });
+// // Обработка страниц при нажатии на кнопку/ярычок таба 
+// function OpenTab(evt, tabName) {
+//     var i, tabcontent, tablinks;
 
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-    }
+//     tabcontent = document.getElementsByClassName("tabcontent");
+//     for (i = 0; i < tabcontent.length; i++) {
+//         tabcontent[i].style.display = "none";
+//     }
 
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
+//     tablinks = document.getElementsByClassName("tablinks");
+//     for (i = 0; i < tablinks.length; i++) {
+//         tablinks[i].className = tablinks[i].className.replace(" active", "");
+//     }
 
-    document.getElementById(tabName).style.display = "block";
-    evt.currentTarget.className += " active";
-}
-// Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
-// document.getElementById("").click();
+//     document.getElementById(tabName).style.display = "block";
+//     evt.currentTarget.className += " active";
+// }
+// // Get the element with id="defaultOpen" and click on it
+// document.getElementById("defaultOpen").click();
+// // document.getElementById("").click();
 // --------------------------------------------------------------------------------
 
 // Круглая кнопочка для возврата на верх страницы
@@ -42,29 +43,29 @@ jQuery(document).ready(function($){
     show_scrollTop();
     });
     // ------------------------------------------------------------------------------------------
-// Обработка АККАРДИОНА
-    var acc = document.getElementsByClassName("accordion");
-    var i;
+// // Обработка АККАРДИОНА
+//     var acc = document.getElementsByClassName("accordion");
+//     var i;
     
-    for (i = 0; i < acc.length; i++) {
-        acc[i].addEventListener("click", function() {
-            /* Toggle between adding and removing the "active" class,
-            to highlight the button that controls the panel */
-            this.classList.toggle("active");
+//     for (i = 0; i < acc.length; i++) {
+//         acc[i].addEventListener("click", function() {
+//             /* Toggle between adding and removing the "active" class,
+//             to highlight the button that controls the panel */
+//             this.classList.toggle("active");
     
-            /* Toggle between hiding and showing the active panel */
-            var hide = this.nextElementSibling;
-            if (hide.style.maxHeight){
-                hide.style.maxHeight = null;
-              } else {
-                hide.style.maxHeight = hide.scrollHeight + "px";
-              } 
+//             /* Toggle between hiding and showing the active panel */
+//             var hide = this.nextElementSibling;
+//             if (hide.style.maxHeight){
+//                 hide.style.maxHeight = null;
+//               } else {
+//                 hide.style.maxHeight = hide.scrollHeight + "px";
+//               } 
             
-        });
-    } 
-    // Первая вкладка аккардиона при загрузке страницы уже раскрыта.
-    document.getElementById("openMain").click();
-    // document.getElementsByClassName("accordion").toggle("active");
+//         });
+//     } 
+//     // Первая вкладка аккардиона при загрузке страницы уже раскрыта.
+//     document.getElementById("openMain").click();
+//     // document.getElementsByClassName("accordion").toggle("active");
     // -------------------------------------------------------------------------------
 
 // ---------Считывание файла .xls не .xlsx---------------------------------------------------
