@@ -4,7 +4,7 @@ body
     /* background-image: url(../Images/map.jpg); */
     /* opacity: 0.8; */
     background: url('../Images/map.jpg'), rgba(255,255,255,0.3);
-background-blend-mode: color;
+    background-blend-mode: color;
   
     /* Фон зафиксирован в области просмотра и потому не двигается, когда высота контента превышает высоту изображения */
     /* background-attachment: fixed; */
@@ -37,10 +37,16 @@ background-blend-mode: color;
   background: #00b0d8 url(images/header-gradient.png) repeat-x;  */
         /* Градиент */
  /* } */
+
+
+ /* Меню */
  .mainmenu 
  {
-  /* display: block;
-  margin: auto; */
+  display: flex;
+  /* flex-wrap: wrap; */
+  justify-content: center;
+ 
+    
   background-image: url(../Images/Boris-Butoma.png);
   height: 200px;
   /* Высота шапки 14.146rem*/
@@ -55,11 +61,28 @@ background-blend-mode: color;
   background-size: contain;
     /* Устанавливает фоновый цвет, который будет отображаться, пока загружается фоновое изображение */
   /* background-color: #464646; */
-  
-  text-align: center; /*Выравнивание по центру */
-  font-weight: bold;
+  /*Выравнивание по центру */
+  text-align: center;
+  /* Жирный шрифт */
+  font-weight: bold; 
+  /* Размер шрифта */
   font-size: 1.2rem;
  }
+ .menu + .menu {
+  margin-left: 12px;
+  /* width: calc(1/4*100% - (1 - 1/3)*10px);
+  margin: 0 0 10px; */
+ }
+
+ /* Меню футера */
+ .mainmenu.footer {
+   background-image: none;
+   height: auto;
+   font-size: 1rem;
+   /* justify-content: initial; */
+ }
+
+
  @media screen and (max-width: 576px)
  {
   .mainmenu 
@@ -69,50 +92,21 @@ background-blend-mode: color;
    }
  }
  @media screen and (max-width: 768px)
- {
-  .mainmenu 
-   {
-    height: 100px;
-   }
- }
-
-
-
+  {
+    .mainmenu 
+      {
+        height: 100px;
+      }
+  }
  
- .header-bg {
-   /* Относительное позиционирование */
-  position: relative; 
-  
- }
+    
  .title {
    display: flex;
    align-items: center;
    justify-content: center;
-  
- }
-/* Адаптивный шрифт от бутстрап
- html {
-  font-size: 1rem;
-}
-
-@include media-breakpoint-up(sm) {
-  html {
-    font-size: 1.2rem;
-  }
-}
-
-@include media-breakpoint-up(md) {
-  html {
-    font-size: 1.4rem;
-  }
-}
-
-@include media-breakpoint-up(lg) {
-  html {
-    font-size: 1.6rem;
-  }
-} */
-
+   font-size: 2.5rem;
+   font-weight: 600;    
+    }
  
 /* Отступы от чекбоксов */
  .menu2
@@ -121,34 +115,28 @@ background-blend-mode: color;
   font-size: 1rem;
   /* Появляется рука при наведении на чекбокс или подпись */
   cursor: pointer; 
-  background-color: gainsboro;
-  opacity: 0;
+  /* background-color: gainsboro; */
+  /* opacity: 0; */
   font-weight: bold;
  }
- .hend 
- {
-  cursor: pointer; 
- }
-
- 
+  
 /* --------------------------------------------------------------------- */
-/* Оформление меню   */
-.tab{
-  display:flexbox;
-  flex-wrap: wrap;
-  /* flex-shrink: 1; */
-  /* flex-direction: column; */
-  align-content: flex-start;
+/* Оформление меню  табу*/
+.nav
+ {
+display: flex;
+/* flex-wrap: wrap; */
+align-items: center;
+justify-content: center;
+
+}
+.nav-link
+{
+  padding: 4px;
+  font-weight: 600;  
 }
 
-  /* @media screen and (max-width: 576px)
-  {
-    .tab
-    {
-      flex-direction: column;
-    }
-  } */
-.tab button.active
+.nav-link.active
     {
       /* background-color: rgb(236, 236, 236); */
       background-image: linear-gradient(to right, deepskyblue,  rgb(229, 245, 250));
@@ -168,96 +156,107 @@ background-blend-mode: color;
       background-color: rgb(236, 236, 236);
       animation: fadeEffect 1s; /* Fading effect takes 1 second */
     }
-    .tablinks:hover {
+    /* .tablinks:hover {
       background-image: linear-gradient(to right, deepskyblue,  rgb(229, 245, 250));
       color: black; 
-    }
+    } */
   
   /* Go from zero to full opacity */
-  @keyframes fadeEffect {
+  /* @keyframes fadeEffect {
       from {opacity: 0;}
       to {opacity: 1;}
-  }
+  } */
 
  /* Оформление меню конец */
 
 
  /* Оформление разделов на вкладках */
- .subsection  
+ /* .subsection  
     {
-      /* display: flex;    
-      justify-content: space-between; */
       color: rgba(58, 140, 233, 0.979);
       background-image: linear-gradient(to right, rgb(229, 245, 250), deepskyblue);
       border-top: 1px solid  deepskyblue;
       padding: 0px 12px;
       /* Отступы ярлычков  */
-      margin: 3px;
+      /* margin: 3px;
       cursor: pointer;
       font-size: 1rem;
-    }
+    }  */
     
-  .hide
+  /* .hide
   {
     padding: 0px 12px;
-  }
+  } */
 
     
   
 /* Кнопки свертыввания разделов на вкладках АККАРДИОН*/
 /* Style the buttons that are used to open and close the accordion panel */
-.accordion {
-  /* background-color: #eee;
-  color: #444; */
+/* .accordion {
   cursor: pointer;
-  /* padding: 18px; */
-  /* width: 100%; */
   text-align: left;
   border: none;
   outline: none;
   transition: 0.4s;
+} */
+/* .card {
+  height: 2rem;
+} */
+.card-header {
+  padding: 0px;
+  margin: 3px;
+  background-image: linear-gradient(to right, rgb(229, 245, 250), deepskyblue);
 }
-
-.accordion:hover {
+.card-header:hover {
   background-image: linear-gradient(to right, deepskyblue,  rgb(229, 245, 250));
   color: black; 
 }
+
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-.active.accordion:hover {
+/* .active.card-header:hover {
   background-image: linear-gradient(to right, deepskyblue,  rgb(229, 245, 250));
   color: black; 
-}
+  
+} */
 
 /* Style the accordion panel. Note: hidden by default */
-.hide {
-  /* padding: 0 18px; */
+/* .hide {
   background-color: white;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
-}
+} */
 /* .hide1 {display: table;} */
-.accordion:after {
+.btn {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.btn:after {
   content: '\02795'; /* Unicode character for "plus" sign (+) */
-  /* font-size: 13px; */
   color: #777;
   float: right;
   margin-left: 5px;
 }
 
-.active.accordion:after {
+.btn:not(class=colapse) {
   content: "\2796"; /* Unicode character for "minus" sign (-) */
 }
 
 /* Нулевая строка для разварачивания и сварачмвания всего аккардиона */
 .openHide
 { 
+  justify-content: flex-end;
   text-align: right;
   color: black;
  
 
 }
+
 /* Кнопки свертыввания разделов на вкладках АККАРДИОН КОНЕЦ*/
 
 
@@ -415,13 +414,16 @@ background-blend-mode: color;
   }
 
   /* Липкий элемент */
-  div.sticky
+  .sticky
   {
-    position: -webkit-sticky; /* Safari */
+    /* position: -webkit-sticky; Safari */
     position: sticky;
     top: 0;
+    z-index: 1;
+    /* background-color: whitesmoke; */
   }
 
+  /* Корректировка размера input в таблицах ширина, высота */
   .vvod
   {
     /* border: 0px; */
@@ -430,4 +432,6 @@ background-blend-mode: color;
     width: 100%;
     height: 100%;
   }
- 
+  .cent {
+    text-align: center;
+  }
